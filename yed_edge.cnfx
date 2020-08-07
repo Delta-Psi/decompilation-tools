@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<styles>
+  <style name="Jump Graph" scope="node" selectionOnly="false">
+    <mapping>
+      <source name="asm" origin="customProperty" type="string"/>
+      <target name="labelText" type="string">
+        <hints>
+          <hint type="boolean">true</hint>
+          <hint type="int">0</hint>
+        </hints>
+      </target>
+      <conversion type="asIs"/>
+    </mapping>
+    <mapping>
+      <source name="entry_point" origin="customProperty" type="boolean"/>
+      <target name="labelBackgroundColor" type="color">
+        <hints>
+          <hint type="int">0</hint>
+        </hints>
+      </target>
+      <conversion type="discrete">
+        <discrete>
+          <value>true</value>
+          <result>#00ff00</result>
+        </discrete>
+      </conversion>
+    </mapping>
+    <mapping>
+      <source name="returns" origin="customProperty" type="boolean"/>
+      <target name="labelBackgroundColor" type="color">
+        <hints>
+          <hint type="int">0</hint>
+        </hints>
+      </target>
+      <conversion type="discrete">
+        <discrete>
+          <value>true</value>
+          <result>#ff0000</result>
+        </discrete>
+      </conversion>
+    </mapping>
+  </style>
+  <style name="Jump Graph" scope="edge" selectionOnly="false">
+    <mapping>
+      <source name="jump" origin="customProperty" type="boolean"/>
+      <target name="lineLineType" type="lineType">
+        <hints/>
+      </target>
+      <conversion type="discrete">
+        <discrete>
+          <value>false</value>
+          <result>
+            <lineType type="line" width="1.0"/>
+          </result>
+        </discrete>
+        <discrete>
+          <value>true</value>
+          <result>
+            <lineType type="dashed" width="1.0"/>
+          </result>
+        </discrete>
+      </conversion>
+    </mapping>
+  </style>
+</styles>
