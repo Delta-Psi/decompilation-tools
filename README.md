@@ -15,10 +15,10 @@ The resulting file will contain a directed graph with one node for each relevant
 
 Each node will have up to two outgoing edges; one represents regular program flow and one represents a (conditional or unconditional) jump. This distinction is made through the `jump` attribute. It should be noted that every node will end in either a jump or a return instruction.
 
-One can use the free tool [yed][https://www.yworks.com/products/yed] to visualize the resulting network. A decent layout can be obtained by:
+One can use the free tool [yed](https://www.yworks.com/products/yed) to visualize the resulting network. A decent layout can be obtained by:
 1. Selecting every node (Control+A) and setting both left alignment and a monospaced font family in the properties view.
 1. Importing the mapping configurations in `yed_node.cnfx` and `yed_edge.cnfx` through `Edit > Properties Mapper...`.
 1. Applying the previous configurations.
 1. Generating a flowchart layout through `Layout > Flowchart` with the default options.
 
-The result should be something like this: ![yed window displaying disassembly graph][images/yed_result.png].
+The result should be something like this: ![yed window displaying disassembly graph](images/yed_result.png).
